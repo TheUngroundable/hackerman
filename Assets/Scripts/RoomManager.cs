@@ -20,15 +20,10 @@ public class RoomManager : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown("space"))
-            OpenDoor(); 
-    }
 
     public void OpenDoor()                          //attivare animaazione porta e crea nuovo tile
     {
-        TileManager.Instance.AddTile();
+        //TileManager.Instance.AddTile();
         StartCoroutine(ActiveDoorAnim());
     }
 
@@ -39,11 +34,11 @@ public class RoomManager : MonoBehaviour
         Vector3 startigRot = door.transform.localEulerAngles;
         while (elapsedTime < .3f)
         {
-            door.transform.localEulerAngles = Vector3.Lerp(startigRot, new Vector3(-90,0,0), (elapsedTime / .3f));
+            door.transform.localEulerAngles = Vector3.Lerp(startigRot, new Vector3(0, -90, 0), (elapsedTime / .3f));
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-        door.transform.localEulerAngles = new Vector3(-90, 0, 0);
+        door.transform.localEulerAngles = new Vector3(0,-90, 0);
     }
 
 
