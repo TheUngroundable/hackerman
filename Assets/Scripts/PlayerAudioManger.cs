@@ -11,7 +11,7 @@ public class PlayerAudioManger : MonoBehaviour
     public Object[] steps;
     public Object[] swearings;
 
-    public float volume;
+    public float volume = 1;
     private void Awake() {
         if (_instance != null && _instance != this) { 
             Destroy(this.gameObject); 
