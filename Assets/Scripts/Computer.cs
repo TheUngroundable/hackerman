@@ -6,6 +6,7 @@ public class Computer : MonoBehaviour{
      public bool repaired;                      //se il monitor è stato fixado
      public void setRepaired(bool repaired){
           this.repaired = repaired;
+        TileManager.Instance.curRoom.CheckForDoor();
           // Alert tile manager
      }
 

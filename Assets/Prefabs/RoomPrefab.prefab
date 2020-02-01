@@ -148,6 +148,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4826192123533948796}
   - component: {fileID: 1852402180}
+  - component: {fileID: 4358035526593262}
   m_Layer: 0
   m_Name: RoomPrefab
   m_TagString: Untagged
@@ -188,9 +189,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextDoor: {fileID: 4826192124232870265}
-  computers: []
+  computers:
+  - {fileID: 3455596693051893879}
   camPos: {fileID: 8560640934958550678}
   door: {fileID: 5738390826436277552}
+--- !u!65 &4358035526593262
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4826192123533948795}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5150464, y: 6.799979, z: 4.796241}
+  m_Center: {x: -1.2419778, y: 2.899989, z: -1.8981204}
 --- !u!1 &4826192124232870264
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,6 +501,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8661196436323009927}
     m_Modifications:
+    - target: {fileID: 4014927097374901427, guid: 0b7f3ff9a8861914bb83d1eb84c4eb64,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4014927097374901427, guid: 0b7f3ff9a8861914bb83d1eb84c4eb64,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4932650391874838706, guid: 0b7f3ff9a8861914bb83d1eb84c4eb64,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -569,3 +594,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6745610786694035235}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &3455596693051893879 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8244269744437305172, guid: 0b7f3ff9a8861914bb83d1eb84c4eb64,
+    type: 3}
+  m_PrefabInstance: {fileID: 6745610786694035235}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecc873984445e064ebdea7820d6a16a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

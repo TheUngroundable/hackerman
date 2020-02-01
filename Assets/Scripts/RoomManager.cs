@@ -28,7 +28,7 @@ public class RoomManager : MonoBehaviour
 
     public void OpenDoor()                          //attivare animaazione porta e crea nuovo tile
     {
-        //TileManager.Instance.AddTile();
+        TileManager.Instance.AddTile();
         StartCoroutine(ActiveDoorAnim());
     }
 
@@ -50,5 +50,17 @@ public class RoomManager : MonoBehaviour
     public void CloseOldDoor()
     {
         //chiudi la prota di sinistra
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            Debug.Log("ciaoe");
+            TileManager.Instance.curRoom = this;
+            //chiudi porta
+            StartCoroutine(TileManager.Instance.MoveCam(camPos.position)); 
+        }
     }
 }

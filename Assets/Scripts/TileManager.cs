@@ -9,22 +9,22 @@ public class TileManager : MonoBehaviour
     public List<RoomManager> rooms = new List<RoomManager>();
     private static TileManager _instance;
     public static TileManager Instance { get { return _instance; } }
-
+    public RoomManager curRoom;
     private void Awake()
     {
-        if (_instance != null && _instance != this)  Destroy(this.gameObject);
-        else  _instance = this;
+        if (_instance != null && _instance != this) Destroy(this.gameObject);
+        else _instance = this;
     }
 
     private void Start()
     {
         AddTile();
-    } 
+    }
 
     private void Update()
     {
         //if (Input.GetMouseButtonDown(0))
-         //   AddTile();
+        //   AddTile();
     }
 
     public void AddTile()
@@ -38,29 +38,29 @@ public class TileManager : MonoBehaviour
         {
             rm.transform.position = Vector3.zero;
             Camera.main.transform.position = rm.camPos.position;
-        } 
+        }
 
         rm.transform.SetParent(transform);
         rooms.Add(rm);
 
         if (rooms.Count > 3)
         {
-            Destroy(rooms[rooms.Count - 4].gameObject); 
+            Destroy(rooms[rooms.Count - 4].gameObject);
             rooms.RemoveAt(rooms.Count - 4);
         }
     }
 
-    IEnumerator MoveCam(Vector3 newPos)
+    public IEnumerator MoveCam(Vector3 newPos)
     {
-        float elapsedTime   = 0;
-        Vector3 startingPos = transform.position;
+        float elapsedTime = 0;
+        Vector3 startingPos = Camera.main.transform.position;
         while (elapsedTime < .3f)
         {
-            transform.position = Vector3.Lerp(startingPos, newPos, (elapsedTime / .3f));
+            Camera.main.transform.position = Vector3.Lerp(startingPos, newPos, (elapsedTime / .3f));
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-        transform.position = newPos;
+        Camera.main.transform.position = newPos;
     }
 
 
