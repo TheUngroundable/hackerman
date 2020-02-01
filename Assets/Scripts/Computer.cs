@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Computer : MonoBehaviour{
-     public bool repaired;                      //se il monitor è stato fixado
+    public bool repaired;
+    public float explosionRadius = 5;
     private Rigidbody rb;
 
     public float explosionForce = 850;
@@ -13,21 +14,12 @@ public class Computer : MonoBehaviour{
         rb = GetComponent<Rigidbody>();
     }
     public void SetRepaired(bool repaired){
-        rb.isKinematic =false;
         this.repaired = repaired;
         TileManager.Instance.curRoom.CheckForDoor();
+        rb.isKinematic =false;
         Vector3 rndForce = new Vector3(transform.localPosition.x + Random.Range(0, .3f), transform.localPosition.y + Random.Range(0, .3f), transform.localPosition.z + Random.Range(0, .3f));
-         rb.AddExplosionForce(explosionForce, transform.position + new Vector3(+1f,0,0), 3, 3.0F);
+        rb.AddExplosionForce(explosionForce, transform.position + new Vector3(+1f,0,0), explosionRadius, 3.0F);
         // Alert tile manager
-    }
-
-    public void ReleaseChildren(){
-        Debug.Log("Releasing children!");
-        Transform[] children = transform.GetChild(0).GetComponentsInChildren<Transform>();
-        foreach(Transform child in children){
-            child.SetParent(null);
-            Debug.Log("Released child");
-        }
     }
 
 }

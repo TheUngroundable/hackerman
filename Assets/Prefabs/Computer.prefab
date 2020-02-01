@@ -345,7 +345,7 @@ Transform:
   m_GameObject: {fileID: 8227815648386011809}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.58744, y: 0.58744, z: 0.58744}
+  m_LocalScale: {x: 1.2663298, y: 1.2663298, z: 1.2663298}
   m_Children:
   - {fileID: 7530873395708647644}
   - {fileID: 8906240329405646822}
@@ -381,6 +381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   repaired: 0
+  explosionForce: 850
 --- !u!54 &4014927097374901427
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -393,9 +394,9 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 10
   m_CollisionDetection: 0
 --- !u!1 &8657164880722768493
 GameObject:

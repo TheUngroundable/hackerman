@@ -13,8 +13,7 @@ public class Mazza : MonoBehaviour
             
             if (collision.gameObject.tag == "Computer" && !collision.gameObject.GetComponent<Computer>().repaired){
                 Computer computer = collision.gameObject.GetComponent<Computer>();
-                computer.SetRepaired(true); 
-                computer.ReleaseChildren();
+                computer.SetRepaired(true);
             }
         }
     }
