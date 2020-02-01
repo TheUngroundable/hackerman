@@ -60,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void PlayerJump(){
-        if(Input.GetKeyDown("space") && timesJumped < 1){  
+        if(Input.GetKeyDown("space") || Input.GetKeyDown(KeyCode.W) && timesJumped < 1){  
             rigidBody.AddForce(Vector3.up * jumpSpeed, ForceMode.Impulse);        
             timesJumped++;
         }
