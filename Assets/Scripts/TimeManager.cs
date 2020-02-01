@@ -29,10 +29,10 @@ public class TimeManager : MonoBehaviour
         { 
         timer -= Time.deltaTime;
         uiTimer.text = timer.ToString("f1");
-        if (timer < 0)
-        {
-            TimerFinised();
-        }
+            if (timer < 0)
+            {
+                TimerFinised();
+            }
         }
     }
 

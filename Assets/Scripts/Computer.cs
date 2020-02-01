@@ -10,7 +10,7 @@ public class Computer : MonoBehaviour{
     {
         rb = GetComponent<Rigidbody>();
     }
-    public void setRepaired(bool repaired){
+    public void SetRepaired(bool repaired){
         rb.isKinematic =false;
         this.repaired = repaired;
         TileManager.Instance.curRoom.CheckForDoor();
@@ -19,5 +19,13 @@ public class Computer : MonoBehaviour{
         // Alert tile manager
     }
 
+    public void ReleaseChildren(){
+        Debug.Log("Releasing children!");
+        Transform[] children = transform.GetChild(0).GetComponentsInChildren<Transform>();
+        foreach(Transform child in children){
+            child.SetParent(null);
+            Debug.Log("Released child");
+        }
+    }
 
 }
