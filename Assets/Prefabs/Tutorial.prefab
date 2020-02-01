@@ -678,6 +678,11 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8304545770963488453, guid: 65a68a7f676587b4781139bd4ab351ab,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 1ab234f6dcc4a204189898331a10ff27, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65a68a7f676587b4781139bd4ab351ab, type: 3}
 --- !u!4 &540608856963983141 stripped

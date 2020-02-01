@@ -22,8 +22,8 @@ public class RoomManager : MonoBehaviour
         {
             if (computers[i].repaired == false)
                 return;
-            else OpenDoor();
         }
+        OpenDoor();
     }
 
 
