@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public AudioClip softSong;
     public AudioClip metalSong;
+    public AudioClip gameOverSong;
     private AudioSource audioSource;
 
     private static GameManager _instance;
@@ -29,6 +30,10 @@ public class GameManager : MonoBehaviour
     public void PlayMetalSong()
     {
         PlayClip(metalSong);
+    }
+
+    public void PlayGameOverSong(){
+        PlayClip(gameOverSong);
     }
 
      void PlayClip(AudioClip clip){
