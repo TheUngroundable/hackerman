@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAudioManger : MonoBehaviour
+public class MazzaAudioManager : MonoBehaviour
 {
-    private static PlayerAudioManger _instance;
-    public static PlayerAudioManger Instance { get { return _instance; } }
+    private static MazzaAudioManager _instance;
+    public static MazzaAudioManager Instance { get { return _instance; } }
     private AudioSource audioSource;
 
-    public Object[] steps;
-    public Object[] swearings;
+    public Object[] hits;
 
     public float volume = 1;
     private void Awake() {
@@ -21,18 +20,12 @@ public class PlayerAudioManger : MonoBehaviour
     }
     void Start() {
         audioSource = GetComponent<AudioSource>();
-        steps = Resources.LoadAll("SFX/Steps", typeof(AudioClip));
-        swearings = Resources.LoadAll("SFX/Imprecazioni", typeof(AudioClip));
+        hits = Resources.LoadAll("SFX/Mazza", typeof(AudioClip));
     }
 
-    public void playMovementSound() {
-        PlaySound(steps);
+    public void PlayHit() {
+        PlaySound(hits);
     }
-
-    public void playSwearingsSound() {   
-        PlaySound(swearings);
-    }
-
     private void PlaySound(Object[] array){
         int randomRange = Random.Range(0, (array.Length-1));
         AudioClip arrayClip = array[randomRange] as AudioClip;
