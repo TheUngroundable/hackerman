@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     private Rigidbody rigidBody;
     private Animator meshAnimator;
     // Start is called before the first frame update
+    
     void Start(){
         rigidBody = GetComponent<Rigidbody>();
         distToGround = GetComponent<Collider>().bounds.extents.y;
@@ -32,6 +33,7 @@ public class Player : MonoBehaviour
     void PlayerAttack(){
         if(Input.GetButtonDown("Fire1")){
             meshAnimator.SetTrigger("attack");
+            PlayerAudioManger.Instance.playSwearingsSound();
             StartCoroutine(AttackCoroutine(attackDuration));
         }
     }
@@ -46,6 +48,7 @@ public class Player : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
 
         if(Mathf.Abs(Input.GetAxis("Horizontal")) > deadZone){
+            PlayerAudioManger.Instance.playMovementSound();
             if(Input.GetAxis("Horizontal")>0){
                 transform.localEulerAngles = new Vector3(0, 90, 0);
             } else {
