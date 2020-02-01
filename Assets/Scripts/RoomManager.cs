@@ -24,7 +24,9 @@ public class RoomManager : MonoBehaviour
             if (computers[i].repaired == false)
                 return;
         }
-        OpenDoor();
+        if (TileManager.Instance.rooms.Count == 1)
+            GameManager.Instance.PlayMetalSong();   
+            OpenDoor();
     }
 
 

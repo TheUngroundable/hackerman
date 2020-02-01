@@ -8,6 +8,15 @@ public class GameManager : MonoBehaviour
     public AudioClip metalSong;
     public AudioClip gameOverSong;
     private AudioSource audioSource;
+
+    private static GameManager _instance;
+    public static GameManager Instance { get { return _instance; } }
+    private void Awake()
+    {
+        if (_instance != null && _instance != this) Destroy(this.gameObject);
+        else _instance = this;
+    }
+
     void Start() {
         audioSource = GetComponent<AudioSource>();
         PlayClip(softSong);
