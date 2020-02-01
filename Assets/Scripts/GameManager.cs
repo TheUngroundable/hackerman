@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public AudioClip softSong;
     public AudioClip metalSong;
+    public AudioClip gameOverSong;
     private AudioSource audioSource;
     void Start() {
         audioSource = GetComponent<AudioSource>();
@@ -20,6 +21,10 @@ public class GameManager : MonoBehaviour
     public void PlayMetalSong()
     {
         PlayClip(metalSong);
+    }
+
+    public void PlayGameOverSong(){
+        PlayClip(gameOverSong);
     }
 
      void PlayClip(AudioClip clip){

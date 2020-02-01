@@ -28,10 +28,13 @@ public class TimeManager : MonoBehaviour
         if (TileManager.Instance.rooms.Count > 1)
         { 
         timer -= Time.deltaTime;
-        uiTimer.text = timer.ToString("f1");
             if (timer < 0)
             {
                 TimerFinised();
+                uiTimer.text = "GAME OVER";
+                // change music to game
+            } else {
+                uiTimer.text = timer.ToString("f1");
             }
         }
     }

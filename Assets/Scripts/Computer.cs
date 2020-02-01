@@ -6,6 +6,8 @@ public class Computer : MonoBehaviour{
      public bool repaired;                      //se il monitor è stato fixado
     private Rigidbody rb;
 
+    public float explosionForce = 850;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -15,7 +17,7 @@ public class Computer : MonoBehaviour{
         this.repaired = repaired;
         TileManager.Instance.curRoom.CheckForDoor();
         Vector3 rndForce = new Vector3(transform.localPosition.x + Random.Range(0, .3f), transform.localPosition.y + Random.Range(0, .3f), transform.localPosition.z + Random.Range(0, .3f));
-         rb.AddExplosionForce(850,transform.position + new Vector3(+1f,0,0), 3, 3.0F);
+         rb.AddExplosionForce(explosionForce, transform.position + new Vector3(+1f,0,0), 3, 3.0F);
         // Alert tile manager
     }
 
