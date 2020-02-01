@@ -33,6 +33,8 @@ public class TileManager : MonoBehaviour
          if (rooms.Count > 0)
             rm.transform.position = rooms[rooms.Count-1].nextDoor.position;
         else rm.transform.position =Vector3.zero;
+
+        rm.transform.SetParent(transform);
         rooms.Add(rm);
 
         if (rooms.Count > 3)
