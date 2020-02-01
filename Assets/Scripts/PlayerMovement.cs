@@ -23,6 +23,17 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update(){
         PlayerJump();
+        MovePlayer();
+        PlayerAttack();
+    }
+
+    void PlayerAttack(){
+        if(Input.GetButtonDown("Fire1")){
+            meshAnimator.SetTrigger("attack");
+        }
+    }
+
+    void MovePlayer(){
         float horizontal = Input.GetAxis("Horizontal");
 
         if(Mathf.Abs(Input.GetAxis("Horizontal")) > deadZone){

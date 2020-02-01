@@ -358,16 +358,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5041284730470624358, guid: cc5438b6a5621c84e8aa2e989d978f60,
-        type: 3}
-      propertyPath: deadZone
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5041284730470624358, guid: cc5438b6a5621c84e8aa2e989d978f60,
-        type: 3}
-      propertyPath: jumpSpeed
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 5041284730470624361, guid: cc5438b6a5621c84e8aa2e989d978f60,
         type: 3}
       propertyPath: m_Name
@@ -389,7 +379,7 @@ GameObject:
   - component: {fileID: 1418654070}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
