@@ -19,13 +19,5 @@ public class Computer : MonoBehaviour{
         // Alert tile manager
     }
 
-    public void ReleaseChildren(){
-        Debug.Log("Releasing children!");
-        Transform[] children = transform.GetChild(0).GetComponentsInChildren<Transform>();
-        foreach(Transform child in children){
-            child.SetParent(null);
-            Debug.Log("Released child");
-        }
-    }
 
 }

@@ -8,13 +8,9 @@ public class Mazza : MonoBehaviour
     public Player player;
     void OnCollisionEnter(Collision collision) {
         if(player.isAttacking){
-            
             MazzaAudioManager.Instance.PlayHit();
-            
             if (collision.gameObject.tag == "Computer" && !collision.gameObject.GetComponent<Computer>().repaired){
-                Computer computer = collision.gameObject.GetComponent<Computer>();
-                computer.SetRepaired(true);
-                computer.ReleaseChildren();
+                collision.gameObject.GetComponent<Computer>().SetRepaired(true);
             }
         }
     }
