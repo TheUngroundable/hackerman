@@ -9,6 +9,7 @@ public class Mazza : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Computer" && player.isAttacking){
+            if (!collision.gameObject.GetComponent<Computer>().repaired)
             collision.gameObject.GetComponent<Computer>().setRepaired(true);
         }
     }
