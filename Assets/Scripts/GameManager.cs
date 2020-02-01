@@ -12,7 +12,17 @@ public class GameManager : MonoBehaviour
         PlayClip(softSong);
     }
 
-    void PlayClip(AudioClip clip){
+    public void PlaySoftSong()
+    {
+        PlayClip(softSong);
+    }
+
+    public void PlayMetalSong()
+    {
+        PlayClip(metalSong);
+    }
+
+     void PlayClip(AudioClip clip){
         audioSource.clip = clip;
         audioSource.Play();
     }

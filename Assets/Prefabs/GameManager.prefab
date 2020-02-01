@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75216886617e61f4cbb59e26e568f709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  softSong: {fileID: 8300000, guid: 318a14eef3faec846880996fab785d56, type: 3}
+  softSong: {fileID: 8300000, guid: d849493aea3d8934b926642567641dea, type: 3}
   metalSong: {fileID: 0}
 --- !u!82 &2067837801011522286
 AudioSource:

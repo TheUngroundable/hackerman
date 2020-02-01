@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4453299, g: 0.49497902, b: 0.57396424, a: 1}
+  m_IndirectSpecularColor: {r: 0.4453302, g: 0.49497944, b: 0.57396483, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -121,27 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &522041754 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5301400525396970118, guid: 7e80b40d2fbd7114b937b3900ca34072,
-    type: 3}
-  m_PrefabInstance: {fileID: 5301400526827066584}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &522041755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 522041754}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be835aa1b1071044298a00bee22555fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  uiTimer: {fileID: 1108201126}
-  addTimer: {fileID: 1749253928}
-  timer: 20
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,7 +195,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 2.037e-42, y: 1.01e-43, z: 980710.94, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0.1640625, z: 0.03515625, w: -0.03515625}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -636,11 +615,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 990411745, guid: cc5438b6a5621c84e8aa2e989d978f60, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 13400000, guid: 3aa1509800385184ea6b67b36cf1feed,
-        type: 2}
     - target: {fileID: 5041284730470624356, guid: cc5438b6a5621c84e8aa2e989d978f60,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -695,21 +669,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5041284730470624356, guid: cc5438b6a5621c84e8aa2e989d978f60,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.1731
-      objectReference: {fileID: 0}
-    - target: {fileID: 5041284730470624356, guid: cc5438b6a5621c84e8aa2e989d978f60,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.1731
-      objectReference: {fileID: 0}
-    - target: {fileID: 5041284730470624356, guid: cc5438b6a5621c84e8aa2e989d978f60,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.1731
       objectReference: {fileID: 0}
     - target: {fileID: 5041284730470624361, guid: cc5438b6a5621c84e8aa2e989d978f60,
         type: 3}
@@ -802,6 +761,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 522041755, guid: 7e80b40d2fbd7114b937b3900ca34072, type: 3}
+      propertyPath: uiTimer
+      value: 
+      objectReference: {fileID: 1108201126}
+    - target: {fileID: 522041755, guid: 7e80b40d2fbd7114b937b3900ca34072, type: 3}
+      propertyPath: addTimer
+      value: 
+      objectReference: {fileID: 1749253928}
     - target: {fileID: 5301400525396970118, guid: 7e80b40d2fbd7114b937b3900ca34072,
         type: 3}
       propertyPath: m_Name
@@ -862,39 +829,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5301400525396970168, guid: 7e80b40d2fbd7114b937b3900ca34072,
-        type: 3}
-      propertyPath: rooms.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5301400525396970168, guid: 7e80b40d2fbd7114b937b3900ca34072,
-        type: 3}
-      propertyPath: roomPrefab.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5301400525396970168, guid: 7e80b40d2fbd7114b937b3900ca34072,
-        type: 3}
-      propertyPath: rooms.Array.data[0]
-      value: 
-      objectReference: {fileID: 1852402180, guid: a6485a4ca4121434c80c39483a5a8999,
-        type: 3}
-    - target: {fileID: 5301400525396970168, guid: 7e80b40d2fbd7114b937b3900ca34072,
-        type: 3}
-      propertyPath: rooms.Array.data[1]
-      value: 
-      objectReference: {fileID: 1852402180, guid: a6485a4ca4121434c80c39483a5a8999,
-        type: 3}
-    - target: {fileID: 5301400525396970168, guid: 7e80b40d2fbd7114b937b3900ca34072,
-        type: 3}
-      propertyPath: roomPrefab.Array.data[0]
-      value: 
-      objectReference: {fileID: 1852402180, guid: 4f3b1b89b53227f4ba6bdbfa19291e75,
-        type: 3}
-    - target: {fileID: 5301400525396970168, guid: 7e80b40d2fbd7114b937b3900ca34072,
-        type: 3}
-      propertyPath: roomTutorialPrefab
-      value: 
-      objectReference: {fileID: 1852402180, guid: a6485a4ca4121434c80c39483a5a8999,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e80b40d2fbd7114b937b3900ca34072, type: 3}

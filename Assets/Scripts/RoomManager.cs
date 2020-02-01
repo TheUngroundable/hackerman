@@ -10,10 +10,11 @@ public class RoomManager : MonoBehaviour
     public GameObject door;
     private bool opened;
     public float scoreTimer;
-
+    private Vector3 startRot;
     private void Start()
     {
         computers = GetComponentsInChildren<Computer>();
+        startRot = door.transform.localEulerAngles ;
     }
 
     public void CheckForDoor()                                          //ogni volta che spacco computer chiamo sta funzione che se tutti i monitor sono distrutti apre porta
@@ -52,20 +53,29 @@ public class RoomManager : MonoBehaviour
         door.transform.localEulerAngles = new Vector3(0, -90, 0);
     }
 
-
-    public void CloseOldDoor()
+    IEnumerator CloseDoorAnim()
     {
-        //chiudi la prota di sinistra
+        float elapsedTime = 0;
+        Vector3 startigRot = door.transform.localEulerAngles;
+        while (elapsedTime < .6f)
+        {
+            door.transform.localEulerAngles = Vector3.Lerp(startigRot, startRot, (elapsedTime / .6f));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        door.transform.localEulerAngles = startRot;
     }
+
 
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            Debug.Log("ciaoe");
+         
             TileManager.Instance.curRoom = this;
-            //chiudi porta
+            if(TileManager.Instance.rooms.Count >1)
+            StartCoroutine( TileManager.Instance.rooms[TileManager.Instance.rooms.Count-2].CloseDoorAnim());
             StartCoroutine(TileManager.Instance.MoveCam(camPos.position));
         }
     }
