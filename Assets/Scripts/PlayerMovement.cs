@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     public int timesJumped;
     public float jumpSpeed;
     public bool isGrounded;
+    public bool isAttacking;
+    public float attackDuration;
     public float deadZone;
     private float distToGround;
     private Vector3 movementDirection;
@@ -30,7 +32,14 @@ public class PlayerMovement : MonoBehaviour
     void PlayerAttack(){
         if(Input.GetButtonDown("Fire1")){
             meshAnimator.SetTrigger("attack");
+            StartCoroutine(AttackCoroutine(attackDuration));
         }
+    }
+
+    IEnumerator AttackCoroutine(float attackDuration){
+        isAttacking = true;
+        yield return new WaitForSeconds(attackDuration);
+        isAttacking = false;
     }
 
     void MovePlayer(){
