@@ -32,7 +32,7 @@ public class TimeManager : MonoBehaviour
             {
                 TimerFinised();
                 uiTimer.text = "GAME OVER";
-                // change music to game
+                GameManager.Instance.PlayGameOverSong();
             } else {
                 uiTimer.text = timer.ToString("f1");
             }
