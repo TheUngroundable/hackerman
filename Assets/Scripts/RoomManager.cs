@@ -9,6 +9,7 @@ public class RoomManager : MonoBehaviour
     public Transform camPos;
     public GameObject door;
     private bool opened;
+    public float scoreTimer;
 
     private void Start()
     {
@@ -30,6 +31,7 @@ public class RoomManager : MonoBehaviour
     {
         if (!opened)
         {
+            TimeManager.Instance.AddTimer(scoreTimer);                  //AGGIUNGI TEMPO
             TileManager.Instance.AddTile();
             StartCoroutine(ActiveDoorAnim());
             opened = true;

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class TileManager : MonoBehaviour
 {
-
-    public RoomManager roomPrefab;
+    public RoomManager roomTutorialPrefab;
+    public RoomManager[] roomPrefab;
     public List<RoomManager> rooms = new List<RoomManager>();
     private static TileManager _instance;
     public static TileManager Instance { get { return _instance; } }
@@ -29,7 +29,11 @@ public class TileManager : MonoBehaviour
 
     public void AddTile()
     {
-        RoomManager rm = Instantiate(roomPrefab);
+        RoomManager rm;
+        if (rooms.Count==0)
+         rm = Instantiate(roomTutorialPrefab);
+        else
+         rm = Instantiate(roomPrefab[Random.Range(0,roomPrefab.Length)]);
         if (rooms.Count > 0)
         {
             rm.transform.position = rooms[rooms.Count - 1].nextDoor.position;
