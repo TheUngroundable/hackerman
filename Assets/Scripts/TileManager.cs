@@ -46,7 +46,7 @@ public class TileManager : MonoBehaviour
         if (rooms.Count > 3)
         {
             Destroy(rooms[rooms.Count - 4].gameObject);
-            rooms.RemoveAt(rooms.Count - 4);
+            rooms.RemoveAt(rooms.Count -4);
         }
     }
 

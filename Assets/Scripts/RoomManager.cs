@@ -8,7 +8,7 @@ public class RoomManager : MonoBehaviour
     public Computer[] computers;
     public Transform camPos;
     public GameObject door;
-
+    private bool opened;
 
     private void Start()
     {
@@ -28,8 +28,12 @@ public class RoomManager : MonoBehaviour
 
     public void OpenDoor()                          //attivare animaazione porta e crea nuovo tile
     {
-        TileManager.Instance.AddTile();
-        StartCoroutine(ActiveDoorAnim());
+        if (!opened)
+        {
+            TileManager.Instance.AddTile();
+            StartCoroutine(ActiveDoorAnim());
+            opened = true;
+        }
     }
 
 
@@ -43,7 +47,7 @@ public class RoomManager : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-        door.transform.localEulerAngles = new Vector3(0,-90, 0);
+        door.transform.localEulerAngles = new Vector3(0, -90, 0);
     }
 
 
@@ -60,7 +64,7 @@ public class RoomManager : MonoBehaviour
             Debug.Log("ciaoe");
             TileManager.Instance.curRoom = this;
             //chiudi porta
-            StartCoroutine(TileManager.Instance.MoveCam(camPos.position)); 
+            StartCoroutine(TileManager.Instance.MoveCam(camPos.position));
         }
     }
 }
