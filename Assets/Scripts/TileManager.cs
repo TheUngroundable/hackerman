@@ -23,8 +23,8 @@ public class TileManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-            AddTile();
+        //if (Input.GetMouseButtonDown(0))
+         //   AddTile();
     }
 
     public void AddTile()
