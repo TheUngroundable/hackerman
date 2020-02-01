@@ -6,7 +6,8 @@ public class RoomManager : MonoBehaviour
 {
     public Transform nextDoor;
     public Computer[] computers;
-
+    public Transform camPos;
+    public GameObject door;
 
 
     public void CheckForDoor()                                          //ogni volta che spacco computer chiamo sta funzione che se tutti i monitor sono distrutti apre porta
@@ -22,6 +23,21 @@ public class RoomManager : MonoBehaviour
     public void OpenDoor()                          //attivare animaazione porta e crea nuovo tile
     {
         TileManager.Instance.AddTile();
+        
+    }
+
+
+    IEnumerator ActiveDoorAnim()
+    {
+        float elapsedTime = 0;
+        Vector3 startigRot = transform.localEulerAngles;
+        while (elapsedTime < .3f)
+        {
+            transform.localEulerAngles = Vector3.Lerp(startigRot, new Vector3(-90,0,0), (elapsedTime / .3f));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+        transform.localEulerAngles = new Vector3(-90, 0, 0);
     }
 
 
