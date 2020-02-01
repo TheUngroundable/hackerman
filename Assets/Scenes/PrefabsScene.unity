@@ -220,6 +220,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2067837801011522284, guid: 9ffc7b66e2b9a1049a045fa011ad779c,
+        type: 3}
+      propertyPath: metalSong
+      value: 
+      objectReference: {fileID: 8300000, guid: 318a14eef3faec846880996fab785d56, type: 3}
     - target: {fileID: 2067837801011522285, guid: 9ffc7b66e2b9a1049a045fa011ad779c,
         type: 3}
       propertyPath: m_LocalPosition.x
