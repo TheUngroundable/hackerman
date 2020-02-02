@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     private Vector3 movementDirection;
     private Rigidbody rigidBody;
     private Animator meshAnimator;
+    public GameObject mazza;
     // Start is called before the first frame update
     
     void Start(){
@@ -40,8 +41,10 @@ public class Player : MonoBehaviour
 
     IEnumerator AttackCoroutine(float attackDuration){
         isAttacking = true;
+        mazza.GetComponent<TrailRenderer>().enabled = true;
         yield return new WaitForSeconds(attackDuration);
         isAttacking = false;
+        mazza.GetComponent<TrailRenderer>().enabled = false;
     }
 
     void MovePlayer(){
