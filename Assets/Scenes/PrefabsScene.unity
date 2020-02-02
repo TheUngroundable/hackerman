@@ -753,6 +753,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6280397110878674389, guid: cc5438b6a5621c84e8aa2e989d978f60,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -876546973899608171, guid: 91db155e4258dac41b5599261793dac7,
+        type: 3}
+    - target: {fileID: 6280397110878674389, guid: cc5438b6a5621c84e8aa2e989d978f60,
+        type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].time
+      value: 0.25897688
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280397110878674389, guid: cc5438b6a5621c84e8aa2e989d978f60,
+        type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+      value: 0.16179657
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280397110878674389, guid: cc5438b6a5621c84e8aa2e989d978f60,
+        type: 3}
+      propertyPath: m_Time
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc5438b6a5621c84e8aa2e989d978f60, type: 3}
 --- !u!1 &1749253926
