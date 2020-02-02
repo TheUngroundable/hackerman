@@ -35,7 +35,7 @@ public class TimeManager : MonoBehaviour
                 uiTimer.text = "GAME OVER";
                 GameManager.Instance.PlayGameOverSong();
             } else {
-                uiTimer.text = timer.ToString("f1");
+                uiTimer.text = timer.ToString("f1")+" SECONDS LEFT";
             }
         }
     }

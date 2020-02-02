@@ -16,7 +16,7 @@ public class Mazza : MonoBehaviour
             if(collision.gameObject.GetComponent<Rigidbody>() != null){
                 Rigidbody collisionRigidbody = collision.gameObject.GetComponent<Rigidbody>();
                 Vector3 rndForce = new Vector3(collision.transform.localPosition.x + Random.Range(0, .3f), collision.transform.localPosition.y + Random.Range(0, .3f), collision.transform.localPosition.z + Random.Range(0, .3f));
-                collisionRigidbody.AddExplosionForce(explosionForce, collision.transform.position + Random.insideUnitSphere, explosionRadius, 3.0F);
+                collisionRigidbody.AddExplosionForce(explosionForce, rndForce, explosionRadius, 3.0F);
                 computersFixed++;
                 TimeManager.Instance.UpdateCounter(computersFixed);
             }
