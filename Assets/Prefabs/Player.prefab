@@ -27,9 +27,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 2.6839848
-  m_Height: 21.610003
+  m_Height: 24.099632
   m_Direction: 1
-  m_Center: {x: -1.1539853, y: -0.5900002, z: -0.39999998}
+  m_Center: {x: -1.1539853, y: -1.834788, z: -0.4000004}
 --- !u!82 &1198863522
 AudioSource:
   m_ObjectHideFlags: 0
@@ -261,6 +261,7 @@ MonoBehaviour:
   player: {fileID: 5041284730470624358}
   explosionForce: 850
   explosionRadius: 5
+  computersFixed: 0
 --- !u!95 &2143691544077958839
 Animator:
   serializedVersion: 3
