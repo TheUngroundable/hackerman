@@ -913,7 +913,7 @@ PrefabInstance:
     - target: {fileID: 5301400525396970168, guid: 7e80b40d2fbd7114b937b3900ca34072,
         type: 3}
       propertyPath: roomPrefab.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5301400525396970168, guid: 7e80b40d2fbd7114b937b3900ca34072,
         type: 3}
@@ -931,7 +931,7 @@ PrefabInstance:
         type: 3}
       propertyPath: roomPrefab.Array.data[3]
       value: 
-      objectReference: {fileID: 1852402180, guid: a75254a12f310ab47b0d9c0c62554beb,
+      objectReference: {fileID: 1852402180, guid: a9bcec8a62bfb0b40b55159021fa4420,
         type: 3}
     - target: {fileID: 5301400525396970168, guid: 7e80b40d2fbd7114b937b3900ca34072,
         type: 3}
@@ -943,7 +943,7 @@ PrefabInstance:
         type: 3}
       propertyPath: roomPrefab.Array.data[0]
       value: 
-      objectReference: {fileID: 1852402180, guid: 1cf7f9ddd0e360749b21dfec1a0d5993,
+      objectReference: {fileID: 1852402180, guid: a75254a12f310ab47b0d9c0c62554beb,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e80b40d2fbd7114b937b3900ca34072, type: 3}
