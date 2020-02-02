@@ -224,7 +224,7 @@ MonoBehaviour:
   computers: []
   camPos: {fileID: 8560640934958550678}
   door: {fileID: 5738390826436277552}
-  scoreTimer: 100
+  scoreTimer: 2
 --- !u!65 &4358035526593262
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -475,7 +475,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 813197397fd429c4eab80b248edc91eb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.16
+      value: -13.34
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 813197397fd429c4eab80b248edc91eb,
         type: 3}
@@ -878,7 +878,7 @@ PrefabInstance:
     - target: {fileID: 4932650391874838706, guid: 0b7f3ff9a8861914bb83d1eb84c4eb64,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.1
+      value: -13.28
       objectReference: {fileID: 0}
     - target: {fileID: 4932650391874838706, guid: 0b7f3ff9a8861914bb83d1eb84c4eb64,
         type: 3}
