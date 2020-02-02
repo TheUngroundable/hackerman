@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4453298, g: 0.4949788, b: 0.57396394, a: 1}
+  m_IndirectSpecularColor: {r: 0.4453299, g: 0.49497902, b: 0.57396424, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -220,16 +220,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2067837801011522284, guid: 9ffc7b66e2b9a1049a045fa011ad779c,
-        type: 3}
-      propertyPath: metalSong
-      value: 
-      objectReference: {fileID: 8300000, guid: 318a14eef3faec846880996fab785d56, type: 3}
-    - target: {fileID: 2067837801011522284, guid: 9ffc7b66e2b9a1049a045fa011ad779c,
-        type: 3}
-      propertyPath: gameOverSong
-      value: 
-      objectReference: {fileID: 8300000, guid: 1146808e689e9e240a951974f11fc82e, type: 3}
     - target: {fileID: 2067837801011522285, guid: 9ffc7b66e2b9a1049a045fa011ad779c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -631,6 +621,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1822928992, guid: cc5438b6a5621c84e8aa2e989d978f60, type: 3}
+      propertyPath: m_Radius
+      value: 2.6839848
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822928992, guid: cc5438b6a5621c84e8aa2e989d978f60, type: 3}
+      propertyPath: m_Height
+      value: 21.610003
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822928992, guid: cc5438b6a5621c84e8aa2e989d978f60, type: 3}
+      propertyPath: m_Center.x
+      value: -1.1539853
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822928992, guid: cc5438b6a5621c84e8aa2e989d978f60, type: 3}
+      propertyPath: m_Center.y
+      value: -0.5900002
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822928992, guid: cc5438b6a5621c84e8aa2e989d978f60, type: 3}
+      propertyPath: m_Center.z
+      value: -0.39999998
+      objectReference: {fileID: 0}
     - target: {fileID: 5041284730470624356, guid: cc5438b6a5621c84e8aa2e989d978f60,
         type: 3}
       propertyPath: m_LocalPosition.x
