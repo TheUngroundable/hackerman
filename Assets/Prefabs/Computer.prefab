@@ -140,8 +140,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   repaired: 0
-  explosionRadius: 5
-  explosionForce: 850
 --- !u!54 &4014927097374901427
 Rigidbody:
   m_ObjectHideFlags: 0

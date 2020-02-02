@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4453299, g: 0.49497902, b: 0.57396424, a: 1}
+  m_IndirectSpecularColor: {r: 0.4453298, g: 0.4949788, b: 0.57396394, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -195,7 +195,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0.1640625, z: 0.03515625, w: -0.03515625}
+  m_BoundingSphereOverride: {x: 0.91744846, y: 0.19298403, z: 0.037134245, w: -0.016580299}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -834,5 +834,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5301400525396970168, guid: 7e80b40d2fbd7114b937b3900ca34072,
+        type: 3}
+      propertyPath: roomPrefab.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5301400525396970168, guid: 7e80b40d2fbd7114b937b3900ca34072,
+        type: 3}
+      propertyPath: roomPrefab.Array.data[1]
+      value: 
+      objectReference: {fileID: 1852402180, guid: a75254a12f310ab47b0d9c0c62554beb,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e80b40d2fbd7114b937b3900ca34072, type: 3}
