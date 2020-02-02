@@ -8,6 +8,8 @@ public class PlayerAudioManger : MonoBehaviour
     public static PlayerAudioManger Instance { get { return _instance; } }
     private AudioSource audioSource;
 
+
+    public bool stepsEnabled;
     public Object[] steps;
     public Object[] swearings;
 
@@ -26,7 +28,9 @@ public class PlayerAudioManger : MonoBehaviour
     }
 
     public void playMovementSound() {
-        PlaySound(steps);
+        if(stepsEnabled){
+            PlaySound(steps);
+        }
     }
 
     public void playSwearingsSound() {   
