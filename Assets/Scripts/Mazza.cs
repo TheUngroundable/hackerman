@@ -11,7 +11,6 @@ public class Mazza : MonoBehaviour
     public float explosionRadius = 5;
     void OnCollisionEnter(Collision collision) {
         if(player.isAttacking){
-            
             MazzaAudioManager.Instance.PlayHit();
             if(collision.gameObject.GetComponent<Rigidbody>() != null){
                 Rigidbody collisionRigidbody = collision.gameObject.GetComponent<Rigidbody>();
