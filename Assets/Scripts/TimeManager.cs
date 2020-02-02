@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class TimeManager : MonoBehaviour
 {
     public Text uiTimer;
+    public Text uiCounter;
     public Text addTimer;
     public float timer = 20;
 
@@ -45,6 +46,10 @@ public class TimeManager : MonoBehaviour
         addTimer.gameObject.SetActive(true);
         addTimer.text = "+" + addTime.ToString();
         StartCoroutine(AddUiScore(addTime));
+    }
+
+    public void UpdateCounter(int counter){
+        uiCounter.text = counter+" COMPUTERS REPAIRED";
     }
 
     public IEnumerator AddUiScore(float time)
