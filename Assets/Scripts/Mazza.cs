@@ -17,13 +17,13 @@ public class Mazza : MonoBehaviour
                 Rigidbody collisionRigidbody = collision.gameObject.GetComponent<Rigidbody>();
                 Vector3 rndForce = new Vector3(collision.transform.localPosition.x + Random.Range(0, .3f), collision.transform.localPosition.y + Random.Range(0, .3f), collision.transform.localPosition.z + Random.Range(0, .3f));
                 collisionRigidbody.AddExplosionForce(explosionForce, collision.transform.position + Random.insideUnitSphere, explosionRadius, 3.0F);
-                computersFixed++;
-                TimeManager.Instance.UpdateCounter(computersFixed);
             }
         
             if (collision.gameObject.tag == "Computer" && !collision.gameObject.GetComponent<Computer>().repaired){
                 Computer computer = collision.gameObject.GetComponent<Computer>();
                 computer.SetRepaired(true);
+                computersFixed++;
+                TimeManager.Instance.UpdateCounter(computersFixed);
             }
         }
     }
