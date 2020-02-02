@@ -26,10 +26,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.53964376
-  m_Height: 16.22
+  m_Radius: 1.53
+  m_Height: 21.61
   m_Direction: 1
-  m_Center: {x: 0, y: 0.18, z: -0.55}
+  m_Center: {x: 0, y: -0.59, z: -0.4}
 --- !u!82 &1198863522
 AudioSource:
   m_ObjectHideFlags: 0
@@ -261,6 +261,35 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &1198863517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313753652734059022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b797322fbbc63864ab23a20cab0f499c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hits: []
+  volume: 1
+--- !u!114 &1822928993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313753652734059022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b914d183ff063644bb5ad7555c3b544d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 5041284730470624358}
+  explosionForce: 850
+  explosionRadius: 5
 --- !u!95 &2143691544077958839
 Animator:
   serializedVersion: 3
