@@ -24,10 +24,15 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update(){
+    void FixedUpdate(){
         PlayerJump();
         MovePlayer();
+    }
+
+    private void Update()
+    {
         PlayerAttack();
+
     }
 
     void PlayerAttack(){
@@ -60,6 +65,8 @@ public class Player : MonoBehaviour
         } else {
             meshAnimator.SetBool("isRunning", false);
         }
+
+   
     }
 
     void PlayerJump(){
