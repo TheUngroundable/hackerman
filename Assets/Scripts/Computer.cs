@@ -13,6 +13,7 @@ public class Computer : MonoBehaviour{
         this.repaired = repaired;
         TileManager.Instance.curRoom.CheckForDoor();
         GetComponent<ParticleSystem>().enableEmission = true;
+        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
     }
 
 }
